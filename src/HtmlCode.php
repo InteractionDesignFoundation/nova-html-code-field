@@ -2,7 +2,6 @@
 
 namespace InteractionDesignFoundation\NovaHtmlCodeField;
 
-use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Field;
 
 class HtmlCode extends Field
@@ -26,8 +25,10 @@ class HtmlCode extends Field
     public $stacked = true;
 
     /**
-     * @param string|\Closure $template
-     * @return $this
+     * Set default HTML code (template).
+     * In order to instruct package where to inject generated HTML, please provide a special marker: "%CODE%"
+     * Example: <section>%CODE%<section>
+     * @param string|\Closure():string $template
      */
     public function previewTemplate($template): self
     {
@@ -35,7 +36,7 @@ class HtmlCode extends Field
             $template = $template();
         }
 
-        if (!Str::contains($template, '%CODE%')) {
+        if (strpos($template, '%CODE%') === false) {
             throw new \InvalidArgumentException('%CODE% placeholder is not found in your template. Please add it.');
         }
 
@@ -44,8 +45,11 @@ class HtmlCode extends Field
         ]);
     }
 
-    /**Inject styles to template */
-    public function styles(array $stylesUrls): self
+    /**
+     * Inject styles to template
+     * @param list<string> $stylesUrls
+     */
+    final public function styles(array $stylesUrls): self
     {
         return $this->withMeta([
             'styles' => $stylesUrls,
