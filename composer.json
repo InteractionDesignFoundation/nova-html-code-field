@@ -1,0 +1,29 @@
+{
+    "name": "interaction-design-foundation/nova-html-code-field",
+    "description": "An HTML Laravel Nova field.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "InteractionDesignFoundation\\NovaHtmlCodeField\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InteractionDesignFoundation\\NovaHtmlCodeField\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
