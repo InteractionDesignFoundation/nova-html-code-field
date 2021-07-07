@@ -65,7 +65,7 @@
 
             generateIFrameContent() {
                 const styles = this.styles.map(styleHref => `<link rel="stylesheet" href="${styleHref}">`);
-                return `<body>
+                return `<body style="padding: 12px;">
 ${styles.join("\n")}
 ${this.template.replace('%CODE%', this.src)}
 </body>`;
