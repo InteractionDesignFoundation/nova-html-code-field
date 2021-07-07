@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 
-class ServiceProvider extends BaseServiceProvider
+final class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Bootstrap any application services.
