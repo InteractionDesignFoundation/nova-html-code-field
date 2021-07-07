@@ -4,6 +4,9 @@
 [![Total Downloads](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/downloads)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 
 
+![image](https://user-images.githubusercontent.com/5278175/124833474-e7a69d80-df86-11eb-99bc-d462107d83bb.png)
+
+
 ## ToDo
 
 1. Add HTML validator (https://www.npmjs.com/package/html-validator)
@@ -20,10 +23,27 @@ composer require interaction-design-foundation/nova-html-code-field
 
 ## Usage
 
+```php
+public function fields()
+{
+    return [ 
+        HtmlCode::make('HTML content'),
+     ];
+}
+```
 
 
 ### Options
 
+ - `->styles(array array $stylesUrls)`:  optional, you can inject your custom css files.
+ - `->previewTemplate(string | \Closure $template)`: optional, wrap editable code to have even better preview.
+
+Full example:
+```php
+HtmlCode::make('HTML content')
+    ->styles([asset(mix('css/app.css'))]),
+    ->previewTemplate('<section class="panel">%CODE%<section>')
+```
 
 ### Changelog
 
