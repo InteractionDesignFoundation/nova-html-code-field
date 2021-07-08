@@ -4,7 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/downloads)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 
 
-![image](https://user-images.githubusercontent.com/5278175/124833474-e7a69d80-df86-11eb-99bc-d462107d83bb.png)
+![image](https://github.com/InteractionDesignFoundation/nova-html-code-field/tree/main/resources/img/demo-800x280@8.gif)
 
 
 ## ToDo
