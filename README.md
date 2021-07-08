@@ -3,8 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/v/stable)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 [![Total Downloads](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/downloads)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 
-
-![image](https://github.com/InteractionDesignFoundation/nova-html-code-field/tree/main/resources/img/demo-800x280@8.gif)
+![image](https://github.com/InteractionDesignFoundation/nova-html-code-field/blob/main/resources/img/demo-800x280@8.gif)
 
 
 ## ToDo
