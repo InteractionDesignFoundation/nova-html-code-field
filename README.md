@@ -3,6 +3,9 @@
 [![Latest Stable Version](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/v/stable)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 [![Total Downloads](https://poser.pugx.org/interaction-design-foundation/nova-html-code-field/downloads)](https://packagist.org/packages/interaction-design-foundation/nova-html-code-field)
 
+![image](https://user-images.githubusercontent.com/5278175/144928019-c295d08c-d8cc-412f-90c1-b94a83aa63a7.png)
+
+
 Sometimes you need an option to write a raw HTML and have a real-time preview for it.
 This package provides such ability. Under the hood this package uses iframe for HTML code your write,
 so Nova styles will not leak to the preview. Additionally, you can provide URLs to your custom CSS file
