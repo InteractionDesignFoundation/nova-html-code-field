@@ -2,14 +2,12 @@
 
 namespace InteractionDesignFoundation\NovaHtmlCodeField\Tests;
 
-use InteractionDesignFoundation\HtmlCard\MarkdownConverter;
-use Illuminate\Support\Facades\App;
 use InteractionDesignFoundation\NovaHtmlCodeField\HtmlCode;
 
 final class HtmlCodeTest extends TestCase
 {
     /** @test */
-    public function it_throws_an_exception_if_invlid_template_used(): void
+    public function it_throws_an_exception_if_invalid_template_used(): void
     {
         $this->expectException(\InvalidArgumentException::class);
 
