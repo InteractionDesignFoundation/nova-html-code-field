@@ -27,7 +27,7 @@ class HtmlCode extends Field
     /**
      * Set default HTML code (template).
      * In order to instruct package where to inject generated HTML, please provide a special marker: "%CODE%"
-     * Example: <section>%CODE%<section>
+     * Example: <section>%CODE%</section>
      * @param string|\Closure():string $template
      */
     public function previewTemplate($template): self

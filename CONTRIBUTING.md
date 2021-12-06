@@ -12,18 +12,6 @@ Please note we have a code of conduct, please follow it in all your interactions
 2. Update the README.md with details of changes to reflect important changes (new options, changed API, etc).
 3. Regenerate dist assets using production env: `npm run prod`.
 
-### Compiling Assets
-
-```bash
-# Compile and minify your assets:
-npm run prod
-
-# Compile your assets for local development:
-npm run dev
-
-# Run the NPM "watch" command to auto-compile your assets when they are changed:
-npm run watch
-```
 
 ## Code of Conduct
 

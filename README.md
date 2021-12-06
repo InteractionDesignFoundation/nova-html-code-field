@@ -43,7 +43,7 @@ Full example:
 ```php
 HtmlCode::make('HTML content')
     ->styles([asset(mix('css/app.css'))]),
-    ->previewTemplate('<section class="panel">%CODE%<section>')
+    ->previewTemplate('<section class="panel">%CODE%</section>')
 ```
 
 ### Changelog
