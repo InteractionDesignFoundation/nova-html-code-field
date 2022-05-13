@@ -65,13 +65,6 @@
             fill(formData) {
                 formData.append(this.field.attribute, this.value)
             },
-
-            /**
-             * Update the field's internal value.
-             */
-            // handleChange(event) {
-            //     this.$emit('change', event.target.value)
-            // },
         },
 
         computed: {
