@@ -2,15 +2,15 @@
 
 namespace InteractionDesignFoundation\NovaHtmlCodeField;
 
-use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\Textarea;
 
-class HtmlCode extends Field
+class HtmlCode extends Textarea
 {
     /**
      * The field's component.
      * @var string
      */
-    public $component = 'html-code-field';
+    public $component = 'nova-html-code-field';
 
     /**
      * Indicates if the element should be shown on the index view.

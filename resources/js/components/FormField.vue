@@ -1,6 +1,6 @@
 <template>
-    <default-field :field="field" :errors="errors" :full-width-content="true">
-        <template slot="field">
+    <DefaultField :field="field" :errors="errors" :show-help-text="showHelpText" :full-width-content="true">
+        <template #field>
             <div class="flex mb-4">
                 <div class="w-1/2 m-3">
                     <label :for="field.name" class="block mb-1">Code</label>
@@ -12,19 +12,29 @@
             </div>
             <div class="flex mb-4">
                 <div class="w-1/2 m-3">
+<!--                    new-->
                     <textarea
-                            :id="field.name"
-                            type="text"
-                            class="w-full form-input form-input-bordered"
-                            :class="errorClasses"
-                            :placeholder="field.name"
-                            v-model="value"
-                            v-bind="extraAttributes"
+                        v-bind="extraAttributes"
+                        class="w-full form-control form-input form-input-bordered py-3 h-auto"
+                        :id="field.name"
+                        :dusk="field.attribute"
+                        :value="value"
+                        @input="handleChange"
                     />
+<!--                    old-->
+<!--                    <textarea-->
+<!--                            :id="field.name"-->
+<!--                            type="text"-->
+<!--                            class="w-full form-control form-input form-input-bordered"-->
+<!--                            :class="errorClasses"-->
+<!--                            :placeholder="field.name"-->
+<!--                            v-model="value"-->
+<!--                            v-bind="extraAttributes"-->
+<!--                    />-->
                 </div>
 
                 <div class="w-1/2 m-3">
-                    <preview-html
+                    <PreviewHtml
                             class="resize-y"
                             :fieldNameToPreview="field.name"
                             :src="value"
@@ -36,19 +46,19 @@
             </div>
 
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
-    import {FormField, HandlesValidationErrors} from 'laravel-nova'
-    import {PreviewHtml} from './PreviewHtml'
+    import PreviewHtml from './PreviewHtml'
+    import { DependentFormField, HandlesValidationErrors } from 'laravel-nova'
 
     export default {
-        mixins: [FormField, HandlesValidationErrors],
+        mixins: [HandlesValidationErrors, DependentFormField],
 
-        components: [
-            PreviewHtml,
-        ],
+        components: {
+            PreviewHtml
+        },
 
         props: ['resourceName', 'resourceId', 'field'],
 
@@ -70,29 +80,28 @@
             /**
              * Update the field's internal value.
              */
-            handleChange(value) {
-                this.value = value
-            },
+            // handleChange(event) {
+            //     this.$emit('change', event.target.value)
+            // },
         },
 
         computed: {
             defaultAttributes() {
                 return {
-                    rows: 10,
+                    rows: this.currentField.rows,
                     class: this.errorClasses,
                     placeholder: this.field.name,
                 }
             },
 
             extraAttributes() {
-                const attrs = this.field.extraAttributes || [];
+                const attrs = this.field.extraAttributes;
 
                 return {
                     ...this.defaultAttributes,
                     ...attrs,
                 }
             },
-
         },
     }
 </script>

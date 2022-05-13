@@ -8,11 +8,8 @@ use Laravel\Nova\Nova;
 
 final class ServiceProvider extends BaseServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     * @return void
-     */
-    public function boot()
+    /** Bootstrap any application services. */
+    public function boot(): void
     {
         Nova::serving(static function (ServingNova $event) {
             Nova::script('html-code-field', __DIR__.'/../dist/js/field.js');

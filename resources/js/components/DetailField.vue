@@ -1,8 +1,8 @@
 <template>
-    <panel-item :field="field">
-        <template slot="value">
+    <PanelItem :index="index" :field="field">
+        <template #value>
             <div class="overflow-hidden">
-                <preview-html
+                <PreviewHtml
                         class="resize-y"
                         :fieldNameToPreview="field.name"
                         :src="field.value"
@@ -11,17 +11,17 @@
                 />
             </div>
         </template>
-    </panel-item>
+    </PanelItem>
 </template>
 
 <script>
-    import {PreviewHtml} from './PreviewHtml'
+    import PreviewHtml from './PreviewHtml'
 
     export default {
-        components: [
-            PreviewHtml,
-        ],
+        components: {
+            PreviewHtml
+        },
 
-        props: ['resource', 'resourceName', 'resourceId', 'field'],
+        props: ['index', 'resource', 'resourceName', 'resourceId', 'field'],
     }
 </script>

@@ -1,23 +1,26 @@
 {
     "name": "interaction-design-foundation/nova-html-code-field",
-    "description": "An HTML Laravel Nova field.",
+    "description": "A Laravel Nova field to write raw HTML and preview.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "laravel-nova-field",
+        "html"
     ],
     "license": "MIT",
     "require": {
         "php": ">=8.0",
-        "laravel/nova": "^3.0"
+        "ext-json": "*",
+        "laravel/nova": "^4.0"
     },
     "require-dev": {
-        "mockery/mockery": "^1.4",
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.4"
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5"
     },
     "repositories": [
         {
-            "type": "composer", "url": "https://nova.laravel.com"
+            "type": "composer",
+            "url": "https://nova.laravel.com"
         }
     ],
     "autoload": {
@@ -43,6 +46,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit --colors=always"
     }
 }

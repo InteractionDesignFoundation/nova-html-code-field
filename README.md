@@ -25,10 +25,12 @@ composer require interaction-design-foundation/nova-html-code-field
 ## Usage
 
 ```php
+use InteractionDesignFoundation\NovaHtmlCodeField\HtmlCode;
+
 public function fields()
 {
-    return [ 
-        HtmlCode::make('HTML content'),
+    return [
+        HtmlCode::make('HTML content', 'content'),
      ];
 }
 ```
@@ -36,15 +38,13 @@ public function fields()
 
 ### Options
 
- - `->styles(array $stylesUrls)`:  optional, you can inject your custom css files.
- - `->previewTemplate(string | \Closure $template)`: optional, wrap editable code to have even better preview.
-
 Full example:
 ```php
-HtmlCode::make('HTML content')
-    ->styles([asset(mix('css/app.css'))]),
-    ->previewTemplate('<section class="panel">%CODE%</section>')
+HtmlCode::make('HTML content', 'content')
+    ->styles([asset(mix('css/app.css'))]), // optional, you can inject your custom CSS files to have more realistic preview.
+    ->previewTemplate('<section class="panel">%CODE%</section>') // optional, wrap editable code to have even better preview (good together with custom styles).
 ```
+
 
 ### Changelog
 
