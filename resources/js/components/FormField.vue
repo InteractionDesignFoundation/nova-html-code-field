@@ -12,7 +12,6 @@
             </div>
             <div class="flex mb-4">
                 <div class="w-1/2 m-3">
-<!--                    new-->
                     <textarea
                         v-bind="extraAttributes"
                         class="w-full form-control form-input form-input-bordered py-3 h-auto"
@@ -21,16 +20,6 @@
                         :value="value"
                         @input="handleChange"
                     />
-<!--                    old-->
-<!--                    <textarea-->
-<!--                            :id="field.name"-->
-<!--                            type="text"-->
-<!--                            class="w-full form-control form-input form-input-bordered"-->
-<!--                            :class="errorClasses"-->
-<!--                            :placeholder="field.name"-->
-<!--                            v-model="value"-->
-<!--                            v-bind="extraAttributes"-->
-<!--                    />-->
                 </div>
 
                 <div class="w-1/2 m-3">
