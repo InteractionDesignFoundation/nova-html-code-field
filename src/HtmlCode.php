@@ -4,6 +4,10 @@ namespace InteractionDesignFoundation\NovaHtmlCodeField;
 
 use Laravel\Nova\Fields\Textarea;
 
+/**
+ * @phpcs:disable SlevomatCodingStandard.Classes.RequireAbstractOrFinal
+ * @noRector \Rector\Privatization\Rector\Class_\FinalizeClassesWithoutChildrenRector
+ */
 class HtmlCode extends Textarea
 {
     /**
