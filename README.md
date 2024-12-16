@@ -52,8 +52,8 @@ public function fields(NovaRequest $request): array
         HtmlCode::make('HTML Content', 'content')
             // Include stylesheets into iframe for more accurate preview
             ->styles([
-                asset('css/app.css'), // your custom
                 'https://cdn.example.com/custom.css', // from a CDN
+                Vite::asset('resources/css/app.css'), // from your app
             ])
             // Wrap the HTML content in a template ("%CODE%" is required)
             ->previewTemplate('<section class="panel">%CODE%</section>'),
