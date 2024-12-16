@@ -1,0 +1,23 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+# better diffs https://php.watch/articles/composer-gitattributes#diff-php
+*.php diff=php
+
+/.github export-ignore
+/resources export-ignore
+
+*.css linguist-vendored
+*.js linguist-vendored
+*.php eol=lf
+*.md text eol=lf
+
+/composer.lock -merge
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.gif binary
