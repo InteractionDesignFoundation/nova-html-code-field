@@ -4,10 +4,7 @@ namespace InteractionDesignFoundation\NovaHtmlCodeField;
 
 use Laravel\Nova\Fields\Textarea;
 
-/**
- * @phpcs:disable SlevomatCodingStandard.Classes.RequireAbstractOrFinal
- * @noRector \Rector\Privatization\Rector\Class_\FinalizeClassesWithoutChildrenRector
- */
+/** @phpcs:disable SlevomatCodingStandard.Classes.RequireAbstractOrFinal */
 class HtmlCode extends Textarea
 {
     /**
@@ -40,7 +37,7 @@ class HtmlCode extends Textarea
             $template = $template();
         }
 
-        if (strpos($template, '%CODE%') === false) {
+        if (!str_contains($template, '%CODE%')) {
             throw new \InvalidArgumentException('%CODE% placeholder is not found in your template. Please add it.');
         }
 
