@@ -9,7 +9,7 @@
         "html"
     ],
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "ext-json": "*",
         "laravel/nova": "^4.25 || ^5.0"
     },
